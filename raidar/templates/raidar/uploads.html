@@ -26,7 +26,7 @@
     [[#each uploads]]
       <tr [[#if success]]class="link" on-click="@this.page({ name: 'encounter', no: encounterUrlId })"[[/if]]>
         <td class="[[success === true ? 'uk-text-success' : success === false ? 'uk-text-danger' : '']]">
-          [[name]]
+          <a [[#if success]]href="[[@this.getPageURL({ name: 'encounter', no: encounterUrlId })]]"[[/if]]>[[name]]</a>
         </td>
         <td>
           [[uploaded_by]]
